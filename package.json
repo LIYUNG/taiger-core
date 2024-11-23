@@ -1,7 +1,7 @@
 {
-  "name": "@taiger-common/hellow-world",
-  "version": "1.0.9",
-  "description": "hello world for taiger",
+  "name": "@taiger-common/core",
+  "version": "1.0.0",
+  "description": "TaiGer core package",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "umd:main": "dist/umd/index.js",
@@ -42,13 +42,13 @@
   ],
   "author": "LIYUNG",
   "license": "MIT",
-  "homepage": "https://github.com/LIYUNG/taiger-hello-world",
+  "homepage": "https://github.com/LIYUNG/taiger-core",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LIYUNG/taiger-hello-world.git"
+    "url": "git+https://github.com/LIYUNG/taiger-core.git"
   },
   "bugs": {
-    "url": "https://github.com/LIYUNG/taiger-hello-world/issues"
+    "url": "https://github.com/LIYUNG/taiger-core/issues"
   },
   "dependencies": {},
   "devDependencies": {
