@@ -220,3 +220,69 @@ export const PROGRAM_SUBJECTS = {
     category: 'SSM'
   }
 };
+
+enum SchoolType {
+  University = 'University',
+  University_of_Applied_Sciences = 'University_of_Applied_Sciences'
+}
+
+export const SCHOOL_TYPES = [
+  SchoolType.University,
+  SchoolType.University_of_Applied_Sciences
+];
+
+enum Category {
+  TU9 = 'TU9',
+  U15 = 'U15',
+  EUROTECH = 'EUROTECH',
+  GERMAN_ELITE = 'GERMAN_ELITE',
+  TOP50 = 'TOP50',
+  TIME = 'TIME',
+  TOP100 = 'TOP100',
+  TOP150 = 'TOP150',
+  TOP250 = 'TOP250',
+  TOP500 = 'TOP500'
+}
+
+export const SCHOOL_TAGS = {
+  [Category.U15]: {
+    label: 'U15',
+    category: 'U15'
+  },
+  [Category.TU9]: {
+    label: 'TU9 German Universities of Technology',
+    category: 'TU9'
+  },
+  [Category.EUROTECH]: {
+    label: 'EuroTech Universities Alliance',
+    category: 'EUROTECH'
+  },
+  [Category.GERMAN_ELITE]: {
+    label: 'German Excellence Initiative',
+    category: 'GERMAN_ELITE'
+  },
+  [Category.TIME]: {
+    label: 'Top International Managers in Engineering',
+    category: 'TIME'
+  },
+  [Category.TOP50]: {
+    label: 'QS Top 50 Universities',
+    category: 'TOP50'
+  },
+  [Category.TOP100]: {
+    label: 'QS Top 100 Universities',
+    category: 'TOP100'
+  },
+  [Category.TOP150]: {
+    label: 'QS Top 150 Universities',
+    category: 'TOP150'
+  },
+  [Category.TOP250]: {
+    label: 'QS Top 250 Universities',
+    category: 'TOP150'
+  },
+  [Category.TOP500]: {
+    label: 'QS Top 500 Universities',
+    category: 'TOP500'
+  }
+};
