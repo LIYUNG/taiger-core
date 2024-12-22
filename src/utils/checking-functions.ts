@@ -1,36 +1,37 @@
+import { Role } from '../constants';
 import { UserProps } from '../types';
 
 // Tested
 export const is_TaiGer_role = (user: UserProps): boolean =>
-  user?.role === 'Admin' ||
-  user?.role === 'Agent' ||
-  user?.role === 'Editor' ||
-  user?.role === 'External';
+  user?.role === Role.Admin ||
+  user?.role === Role.Agent ||
+  user?.role === Role.Editor ||
+  user?.role === Role.External;
 
 // Tested
 export const is_TaiGer_AdminAgent = (user: UserProps): boolean =>
-  user?.role === 'Admin' || user?.role === 'Agent';
+  user?.role === Role.Admin || user?.role === Role.Agent;
 
 // Tested
 export const is_TaiGer_Admin = (user: UserProps): boolean =>
-  user?.role === 'Admin';
+  user?.role === Role.Admin;
 
 // Tested
 export const is_TaiGer_Editor = (user: UserProps): boolean =>
-  user?.role === 'Editor';
+  user?.role === Role.Editor;
 
 export const is_TaiGer_External = (user: UserProps): boolean =>
-  user?.role === 'External';
+  user?.role === Role.External;
 
 // Tested
 export const is_TaiGer_Agent = (user: UserProps): boolean =>
-  user?.role === 'Agent';
+  user?.role === Role.Agent;
 
 export const is_TaiGer_Manager = (user: UserProps): boolean =>
-  user?.role === 'Manager';
+  user?.role === Role.Manager;
 
 // Tested
 export const is_TaiGer_Student = (user: UserProps): boolean =>
-  user?.role === 'Student';
+  user?.role === Role.Student;
 export const is_TaiGer_Guest = (user: UserProps): boolean =>
-  user?.role === 'Guest';
+  user?.role === Role.Guest;

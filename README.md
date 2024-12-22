@@ -8,6 +8,9 @@ git add .
 git commit -m "fix: your_commit"
 git push origin main
 
+# Run build
+npm run build
+
 # Bump version
 npm version patch    # or minor/major
 
