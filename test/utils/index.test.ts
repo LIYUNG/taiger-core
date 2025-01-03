@@ -5,13 +5,23 @@ import {
   is_TaiGer_Editor,
   is_TaiGer_Student,
   is_TaiGer_Agent,
-  Bayerische_Formel
+  Bayerische_Formel,
+  isNotArchiv
 } from '../../src/utils';
 
-const userStudent = { role: 'Student' };
-const userAgent = { role: 'Agent' };
+const userStudent = { role: 'Student', archiv: true };
+const userAgent = { role: 'Agent', archiv: false };
 const userEditor = { role: 'Editor' };
 const userAdmin = { role: 'Admin' };
+
+describe('isNotArchiv', () => {
+  test('isNotArchiv', () => {
+    expect(isNotArchiv(userStudent)).toEqual(false);
+    expect(isNotArchiv(userAgent)).toEqual(true);
+    expect(isNotArchiv(userEditor)).toEqual(true);
+    expect(isNotArchiv(userAdmin)).toEqual(true);
+  });
+});
 
 describe('Role checking', () => {
   test('is_TaiGer_role', () => {

@@ -49,3 +49,11 @@ export const Bayerische_Formel = (
   }
   return '0';
 };
+
+// Tested
+export const isNotArchiv = (user: UserProps): boolean => {
+  if (user.archiv === undefined || !user.archiv) {
+    return true;
+  }
+  return false;
+};
