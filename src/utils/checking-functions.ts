@@ -33,5 +33,19 @@ export const is_TaiGer_Manager = (user: UserProps): boolean =>
 // Tested
 export const is_TaiGer_Student = (user: UserProps): boolean =>
   user?.role === Role.Student;
+
 export const is_TaiGer_Guest = (user: UserProps): boolean =>
   user?.role === Role.Guest;
+
+// Tested
+export const Bayerische_Formel = (
+  high: number,
+  low: number,
+  my: number
+): string => {
+  if (high - low !== 0) {
+    const Germen_note = 1 + (3 * (high - my)) / (high - low);
+    return Germen_note.toFixed(2);
+  }
+  return '0';
+};

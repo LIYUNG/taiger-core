@@ -221,6 +221,12 @@ export const PROGRAM_SUBJECTS = {
   }
 };
 
+export enum SemesterType {
+  SummerSemester = 'SS',
+  WinterSemester = 'WS',
+  Rolling = 'Rolling'
+}
+
 enum SchoolType {
   University = 'University',
   University_of_Applied_Sciences = 'University_of_Applied_Sciences'
