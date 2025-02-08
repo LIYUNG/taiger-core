@@ -9,7 +9,9 @@ import {
   isNotArchiv,
   isProgramDecided,
   isProgramSubmitted,
-  isProgramAdmitted
+  isProgramAdmitted,
+  isProgramRejected,
+  isProgramWithdraw
 } from '../../src/utils';
 
 const userStudent = { role: 'Student', archiv: true };
@@ -63,6 +65,26 @@ describe('isProgramAdmitted', () => {
     expect(isProgramAdmitted(admittedProgram)).toEqual(true);
     expect(isProgramAdmitted(notAdmittedProgram)).toEqual(false);
     expect(isProgramAdmitted(notAdmittedYetProgram)).toEqual(false);
+  });
+});
+
+describe('isProgramRejected', () => {
+  test('isProgramRejected', () => {
+    const rejectedProgram = { decided: 'O', closed: 'O', admission: 'X' };
+    const notRejectedYetProgram = { decided: 'O', closed: 'O', admission: '-' };
+
+    expect(isProgramRejected(rejectedProgram)).toEqual(true);
+    expect(isProgramRejected(notRejectedYetProgram)).toEqual(false);
+  });
+});
+
+describe('isProgramWithdraw', () => {
+  test('isProgramWithdraw', () => {
+    const submittedProgram = { decided: 'O', closed: 'O', admission: '-' };
+    const notSubmittedProgram = { decided: 'O', closed: 'X', admission: '-' };
+
+    expect(isProgramWithdraw(submittedProgram)).toEqual(false);
+    expect(isProgramWithdraw(notSubmittedProgram)).toEqual(true);
   });
 });
 

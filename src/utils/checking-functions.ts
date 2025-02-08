@@ -72,3 +72,13 @@ export const isProgramSubmitted = (application: ApplicationProps): boolean => {
 export const isProgramAdmitted = (application: ApplicationProps): boolean => {
   return application.admission === 'O';
 };
+
+// Tested
+export const isProgramRejected = (application: ApplicationProps): boolean => {
+  return application.admission === 'X';
+};
+
+// Tested
+export const isProgramWithdraw = (application: ApplicationProps): boolean => {
+  return application.closed === 'X';
+};
