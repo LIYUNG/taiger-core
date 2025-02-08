@@ -1,5 +1,5 @@
 import { Role } from '../constants';
-import { UserProps } from '../types';
+import { ApplicationProps, UserProps } from '../types';
 
 // Tested
 export const is_TaiGer_role = (user: UserProps): boolean =>
@@ -56,4 +56,19 @@ export const isNotArchiv = (user: UserProps): boolean => {
     return true;
   }
   return false;
+};
+
+// Tested
+export const isProgramDecided = (application: ApplicationProps): boolean => {
+  return application.decided === 'O';
+};
+
+// Tested
+export const isProgramSubmitted = (application: ApplicationProps): boolean => {
+  return application.closed === 'O';
+};
+
+// Tested
+export const isProgramAdmitted = (application: ApplicationProps): boolean => {
+  return application.admission === 'O';
 };

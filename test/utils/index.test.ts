@@ -6,7 +6,10 @@ import {
   is_TaiGer_Student,
   is_TaiGer_Agent,
   Bayerische_Formel,
-  isNotArchiv
+  isNotArchiv,
+  isProgramDecided,
+  isProgramSubmitted,
+  isProgramAdmitted
 } from '../../src/utils';
 
 const userStudent = { role: 'Student', archiv: true };
@@ -14,12 +17,52 @@ const userAgent = { role: 'Agent', archiv: false };
 const userEditor = { role: 'Editor' };
 const userAdmin = { role: 'Admin' };
 
+const decidedProgram = { decided: 'O', closed: '-', admission: '-' };
+const notDecidedProgram = { decided: 'X', closed: '-', admission: '-' };
+const notDecidedYetProgram = { decided: '-', closed: '-', admission: '-' };
+
 describe('isNotArchiv', () => {
   test('isNotArchiv', () => {
     expect(isNotArchiv(userStudent)).toEqual(false);
     expect(isNotArchiv(userAgent)).toEqual(true);
     expect(isNotArchiv(userEditor)).toEqual(true);
     expect(isNotArchiv(userAdmin)).toEqual(true);
+  });
+});
+
+describe('isProgramDecided', () => {
+  test('isProgramDecided', () => {
+    expect(isProgramDecided(decidedProgram)).toEqual(true);
+    expect(isProgramDecided(notDecidedProgram)).toEqual(false);
+    expect(isProgramDecided(notDecidedYetProgram)).toEqual(false);
+  });
+});
+
+describe('isProgramSubmitted', () => {
+  test('isProgramSubmitted', () => {
+    const submittedProgram = { decided: 'O', closed: 'O', admission: '-' };
+    const notSubmittedProgram = { decided: 'O', closed: 'X', admission: '-' };
+    const notSubmittedYetProgram = {
+      decided: 'O',
+      closed: '-',
+      admission: '-'
+    };
+
+    expect(isProgramSubmitted(submittedProgram)).toEqual(true);
+    expect(isProgramSubmitted(notSubmittedProgram)).toEqual(false);
+    expect(isProgramSubmitted(notSubmittedYetProgram)).toEqual(false);
+  });
+});
+
+describe('isProgramAdmitted', () => {
+  test('isProgramAdmitted', () => {
+    const admittedProgram = { decided: 'O', closed: 'O', admission: 'O' };
+    const notAdmittedProgram = { decided: 'O', closed: 'O', admission: 'X' };
+    const notAdmittedYetProgram = { decided: 'O', closed: 'O', admission: '-' };
+
+    expect(isProgramAdmitted(admittedProgram)).toEqual(true);
+    expect(isProgramAdmitted(notAdmittedProgram)).toEqual(false);
+    expect(isProgramAdmitted(notAdmittedYetProgram)).toEqual(false);
   });
 });
 
