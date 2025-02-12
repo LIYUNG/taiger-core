@@ -227,12 +227,12 @@ export enum SemesterType {
   Rolling = 'Rolling'
 }
 
-enum SchoolType {
+export enum SchoolType {
   University = 'University',
   University_of_Applied_Sciences = 'University_of_Applied_Sciences'
 }
 
-export const SCHOOL_TYPES = [
+export const SCHOOL_TYPES: SchoolType[] = [
   SchoolType.University,
   SchoolType.University_of_Applied_Sciences
 ];
