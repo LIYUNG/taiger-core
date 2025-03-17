@@ -250,6 +250,12 @@ enum Category {
   TOP500 = 'TOP500'
 }
 
+export const DIFFICULTY = {
+  EASY: 'EASY',
+  MEDIUM: 'MEDIUM',
+  HARD: 'HARD'
+};
+
 export const SCHOOL_TAGS = {
   [Category.U15]: {
     label: 'U15',
