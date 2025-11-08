@@ -18,11 +18,6 @@ export const PROGRAM_TASK_DEFINITIONS = [
   },
   { key: 'rl', field: 'rl_required', label: 'Recommendation Letter' },
   { key: 'essay', field: 'essay_required', label: 'Essay' },
-  {
-    key: 'essay_consultant',
-    field: 'isEssayConsultantNeeded',
-    label: 'Essay Consultant Support'
-  },
   { key: 'portfolio', field: 'portfolio_required', label: 'Portfolio' },
   {
     key: 'supplementary_form',
