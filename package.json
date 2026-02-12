@@ -50,7 +50,7 @@
   "bugs": {
     "url": "https://github.com/LIYUNG/taiger-core/issues"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@taiger-common/model": "^1.0.47"
   },
   "devDependencies": {
