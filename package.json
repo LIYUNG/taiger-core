@@ -51,7 +51,7 @@
     "url": "https://github.com/LIYUNG/taiger-core/issues"
   },
   "peerDependencies": {
-    "@taiger-common/model": "^1.0.47"
+    "@taiger-common/model": "^1.0.48"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",

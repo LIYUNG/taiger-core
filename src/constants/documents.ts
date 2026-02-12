@@ -1,11 +1,3 @@
-export enum DocumentStatusType {
-  Uploaded = 'uploaded',
-  Missing = 'missing',
-  Accepted = 'accepted',
-  Rejected = 'rejected',
-  NotNeeded = 'notneeded'
-}
-
 export enum ProfileNameType {
   High_School_Diploma = 'High_School_Diploma',
   High_School_Transcript = 'High_School_Transcript',
