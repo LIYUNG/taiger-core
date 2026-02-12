@@ -13,15 +13,16 @@ import {
   isProgramRejected,
   isProgramWithdraw
 } from '../../src/utils';
+import { IUser, IApplication } from '@taiger-common/model';
 
-const userStudent = { role: 'Student', archiv: true };
-const userAgent = { role: 'Agent', archiv: false };
-const userEditor = { role: 'Editor' };
-const userAdmin = { role: 'Admin' };
+const userStudent: IUser = { role: 'Student', archiv: true };
+const userAgent: IUser = { role: 'Agent', archiv: false };
+const userEditor: IUser = { role: 'Editor' };
+const userAdmin: IUser = { role: 'Admin' };
 
-const decidedProgram = { decided: 'O', closed: '-', admission: '-' };
-const notDecidedProgram = { decided: 'X', closed: '-', admission: '-' };
-const notDecidedYetProgram = { decided: '-', closed: '-', admission: '-' };
+const decidedProgram: IApplication = { decided: 'O', closed: '-', admission: '-' };
+const notDecidedProgram: IApplication = { decided: 'X', closed: '-', admission: '-' };
+const notDecidedYetProgram: IApplication = { decided: '-', closed: '-', admission: '-' };
 
 describe('isNotArchiv', () => {
   test('isNotArchiv', () => {

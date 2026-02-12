@@ -50,7 +50,9 @@
   "bugs": {
     "url": "https://github.com/LIYUNG/taiger-core/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@taiger-common/model": "^1.0.47"
+  },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
