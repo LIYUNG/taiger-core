@@ -58,27 +58,30 @@ export const isNotArchiv = (user: IUser): boolean => {
   return false;
 };
 
+// Use Pick so these functions accept both IApplication and IApplicationPopulated
+type ApplicationDecisionLike = Pick<IApplication, 'decided' | 'closed' | 'admission'>;
+
 // Tested
-export const isProgramDecided = (application: IApplication): boolean => {
+export const isProgramDecided = (application: ApplicationDecisionLike): boolean => {
   return application.decided === 'O';
 };
 
 // Tested
-export const isProgramSubmitted = (application: IApplication): boolean => {
+export const isProgramSubmitted = (application: ApplicationDecisionLike): boolean => {
   return application.closed === 'O';
 };
 
 // Tested
-export const isProgramAdmitted = (application: IApplication): boolean => {
+export const isProgramAdmitted = (application: ApplicationDecisionLike): boolean => {
   return application.admission === 'O';
 };
 
 // Tested
-export const isProgramRejected = (application: IApplication): boolean => {
+export const isProgramRejected = (application: ApplicationDecisionLike): boolean => {
   return application.admission === 'X';
 };
 
 // Tested
-export const isProgramWithdraw = (application: IApplication): boolean => {
+export const isProgramWithdraw = (application: ApplicationDecisionLike): boolean => {
   return application.closed === 'X';
 };
